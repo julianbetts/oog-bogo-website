@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Horizon';
+    src: url('/assets/fonts/horizon.otf') format('opentype');
+}
+
+body {
+    background-color: black;
+    color:white;
+    font-family: 'Horizon';
+}
+
+a {
+    color: rgb(53, 160, 248);
+}
+
+.center-container {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+}
+
+/* .video-container {
+
+} */
+/* home */
+#cowgirls-cover {
+    display: grid;
+    margin: auto;
+}
+
+#cowgirls-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* spacing between icons */
+  margin-top: 1em;
+}
+
+
+.buy-button {
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+}
+
+.buy-button:before {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+.buy-button:hover:before {
+  background-color: #fff;
+  width: 3rem;
+}
+/* videos */
+.video-class {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+/* shows */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px dotted ;
+    color: #FFFF00;
+  }
+ 
+  .show-info a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  .show-info a:hover {
+    text-decoration: underline;
+  }
+  .show-date {
+    font-weight: bold;
+  }
+/* press */
+
+/* contact */
