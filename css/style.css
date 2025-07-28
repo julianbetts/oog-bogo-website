@@ -10,7 +10,7 @@ body {
 }
 
 a {
-    color: rgb(53, 160, 248);
+    color: royalblue;
 }
 
 .center-container {
@@ -21,10 +21,14 @@ a {
     display: grid;
 }
 
-/* .video-container {
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
 
-} */
 /* home */
+
 #cowgirls-cover {
     display: grid;
     margin: auto;
@@ -36,7 +40,6 @@ a {
   gap: 20px; /* spacing between icons */
   margin-top: 1em;
 }
-
 
 .buy-button {
   align-items: center;
@@ -70,36 +73,96 @@ a {
   background-color: #fff;
   width: 3rem;
 }
+
 /* videos */
+
 .video-class {
     display: flex;
     justify-content: center;
     margin-top: 5rem;
 }
+
 /* shows */
+
 table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
+
   th, td {
     padding: 12px 15px;
     text-align: center;
     border: 1px dotted ;
     color: #FFFF00;
   }
- 
+
   .show-info a {
-    color: #007BFF;
+    color: royalblue;
     text-decoration: none;
   }
+
   .show-info a:hover {
     text-decoration: underline;
   }
+
   .show-date {
     font-weight: bold;
   }
-/* press */
+
+/* ALBUMS */
+
+.album-card {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps text color the same as parent */
+}
+
+.album-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.album-title {
+    font-family: 'Horizon', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
 
 /* contact */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+}
+
+#contact-link {
+    display: flex;
+    justify-content: center;
+}
+
+/* press */
+
+#blurry-photo {
+    max-width: 100%; 
+    height: auto;
+    opacity: .25;
+    margin-top: 1.5rem;
+}
+
+/* mobile */
+
+@media screen and (max-width: 600px) {
+
+    .album-title {
+        text-align: center;
+    }
+
+    .album-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: auto;
+    }
+}
