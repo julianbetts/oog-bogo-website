@@ -182,6 +182,61 @@ section#description {
 
 /* shows */
 
+/* Calendar list styling to look like table */
+#calendar {
+    width: 80%;
+    margin: 20px auto;
+    list-style: none;
+    padding: 0;
+    background-color: black;
+    border: 1px solid #333;
+}
+
+#calendar li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    color: #eaea7b; /* Yellow text color */
+    border-bottom: 1px dotted #eaea7b; /* Dotted line separator */
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#calendar li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+#calendar .show-date {
+    font-weight: bold;
+    min-width: 60px;
+}
+
+#calendar .show-title {
+    flex: 1;
+    text-align: center;
+    margin: 0 20px;
+}
+
+#calendar .show-location {
+    min-width: 150px;
+    text-align: right;
+}
+
+#calendar .show-tickets {
+    min-width: 80px;
+    text-align: right;
+}
+
+#calendar .show-tickets a {
+    color: royalblue;
+    text-decoration: none;
+}
+
+#calendar .show-tickets a:hover {
+    text-decoration: underline;
+}
+
 table {
     width: 80%;
     margin: 20px auto;
@@ -261,6 +316,59 @@ table {
 
     .navbar-links {
       display: none;
+    }
+
+    /* Calendar mobile layout */
+    #calendar {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    #calendar li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-bottom: 1px dotted #eaea7b;
+    }
+
+    #calendar li:last-child {
+        border-bottom: none;
+    }
+
+    /* First line: date and venue */
+    #calendar .show-date,
+    #calendar .show-title {
+        display: inline-block;
+        margin: 0;
+        min-width: auto;
+    }
+
+    #calendar .show-date {
+        margin-right: 15px;
+        font-weight: bold;
+    }
+
+    #calendar .show-title {
+        flex: none;
+        text-align: left;
+    }
+
+    /* Second line: location and tickets */
+    #calendar .show-location,
+    #calendar .show-tickets {
+        display: inline-block;
+        margin: 0;
+        min-width: auto;
+        text-align: left;
+    }
+
+    #calendar .show-location {
+        margin-right: 15px;
+    }
+
+    #calendar .show-tickets {
+        text-align: left;
     }
 
     /* albums */
