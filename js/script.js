@@ -1,0 +1,1 @@
+const responseiveMenuButton = document.getElementById('responsiveToggleMenuButton')

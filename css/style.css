@@ -3,10 +3,17 @@
     src: url('/assets/fonts/horizon.otf') format('opentype');
 }
 
+:root {
+  --light-text: rgb(217, 215, 215);
+  --white: rgb(254, 253, 253);
+}
+
 body {
     background-color: black;
     color:white;
     font-family: 'Horizon';
+    margin: 0; 
+    /* margin was changed for navbar */
 }
 
 a {
@@ -25,6 +32,97 @@ a {
     display: flex;
     justify-content: center;
     margin-top: 1.5rem;
+}
+
+/* nabar */
+
+.navbar {
+  /* position imposes navbar in front of photo */
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(0,0,0,.2);
+}
+
+.navbar .brand {
+  padding: .75rem 1rem;
+  color: var(--light-text);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding-right: 1rem;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.navbar-links ul li a {
+  color: var(--light-text);
+  text-decoration: none;
+}
+
+#responsiveMenuToggleButton {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#responsiveMenuToggleButton svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: var(--light-text);
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+}
+
+#responsiveMenuToggleButton .openIcon {
+  display: block;
+}
+
+#responsiveMenuToggleButton .closeIcon {
+  display: none;
+}
+
+#responsiveMenuToggleButton.open .openIcon {
+  display: none;
+}
+
+#responsiveMenuToggleButton.open .closeIcon {
+  display: block;
+}
+
+/* hero */
+section#hero {
+  background-image: url(../assets/images/blurry-bogo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PADDING 1rem for smaller screen sizes! */
+section#hero h1 {
+  padding: 1rem;
+  font-size: 3rem;
+  /* change var if not good palette */
+  color: var(--white)
+}
+
+section#description {
+  padding: 1rem;
 }
 
 /* home */
@@ -84,6 +182,61 @@ a {
 
 /* shows */
 
+/* Calendar list styling to look like table */
+#calendar {
+    width: 80%;
+    margin: 20px auto;
+    list-style: none;
+    padding: 0;
+    background-color: black;
+    border: 1px solid #333;
+}
+
+#calendar li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    color: #eaea7b; /* Yellow text color */
+    border-bottom: 1px dotted #eaea7b; /* Dotted line separator */
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#calendar li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+#calendar .show-date {
+    font-weight: bold;
+    min-width: 60px;
+}
+
+#calendar .show-title {
+    flex: 1;
+    text-align: center;
+    margin: 0 20px;
+}
+
+#calendar .show-location {
+    min-width: 150px;
+    text-align: right;
+}
+
+#calendar .show-tickets {
+    min-width: 80px;
+    text-align: right;
+}
+
+#calendar .show-tickets a {
+    color: royalblue;
+    text-decoration: none;
+}
+
+#calendar .show-tickets a:hover {
+    text-decoration: underline;
+}
+
 table {
     width: 80%;
     margin: 20px auto;
@@ -95,7 +248,7 @@ table {
     padding: 12px 15px;
     text-align: center;
     border: 1px dotted ;
-    color: #FFFF00;
+    color: #eaea7b;
   }
 
   .show-info a {
@@ -121,6 +274,10 @@ table {
 .album-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
 }
 .album-title {
     font-family: 'Horizon', sans-serif;
@@ -156,13 +313,94 @@ table {
 
 @media screen and (max-width: 600px) {
 
+    /* navbar */
+    #responsiveMenuToggleButton {
+    display: block;
+    }
+
+    .navbar-links {
+      display: none;
+    }
+
+    /* Calendar mobile layout */
+    #calendar {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    #calendar li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-bottom: 1px dotted #eaea7b;
+    }
+
+    #calendar li:last-child {
+        border-bottom: none;
+    }
+
+    /* First line: date and venue */
+    #calendar .show-date,
+    #calendar .show-title {
+        display: inline-block;
+        margin: 0;
+        min-width: auto;
+    }
+
+    #calendar .show-date {
+        margin-right: 15px;
+        font-weight: bold;
+    }
+
+    #calendar .show-title {
+        flex: none;
+        text-align: left;
+    }
+
+    /* Second line: location and tickets */
+    #calendar .show-location,
+    #calendar .show-tickets {
+        display: inline-block;
+        margin: 0;
+        min-width: auto;
+        text-align: left;
+    }
+
+    #calendar .show-location {
+        margin-right: 15px;
+    }
+
+    #calendar .show-tickets {
+        text-align: left;
+    }
+
+    /* albums */
     .album-title {
         text-align: center;
     }
 
     .album-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        /* padding: 0 15px;
+        margin: 0 auto; */
+        width: 50%;
+    }
+
+    .album-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .album-card img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        display: block;
     }
 }
