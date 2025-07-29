@@ -3,10 +3,17 @@
     src: url('/assets/fonts/horizon.otf') format('opentype');
 }
 
+:root {
+  --light-text: rgb(217, 215, 215);
+  --white: rgb(254, 253, 253);
+}
+
 body {
     background-color: black;
     color:white;
     font-family: 'Horizon';
+    margin: 0; 
+    /* margin was changed for navbar */
 }
 
 a {
@@ -25,6 +32,97 @@ a {
     display: flex;
     justify-content: center;
     margin-top: 1.5rem;
+}
+
+/* nabar */
+
+.navbar {
+  /* position imposes navbar in front of photo */
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(0,0,0,.2);
+}
+
+.navbar .brand {
+  padding: .75rem 1rem;
+  color: var(--light-text);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding-right: 1rem;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.navbar-links ul li a {
+  color: var(--light-text);
+  text-decoration: none;
+}
+
+#responsiveMenuToggleButton {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#responsiveMenuToggleButton svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: var(--light-text);
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+}
+
+#responsiveMenuToggleButton .openIcon {
+  display: block;
+}
+
+#responsiveMenuToggleButton .closeIcon {
+  display: none;
+}
+
+#responsiveMenuToggleButton.open .openIcon {
+  display: none;
+}
+
+#responsiveMenuToggleButton.open .closeIcon {
+  display: block;
+}
+
+/* hero */
+section#hero {
+  background-image: url(../assets/images/blurry-bogo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PADDING 1rem for smaller screen sizes! */
+section#hero h1 {
+  padding: 1rem;
+  font-size: 3rem;
+  /* change var if not good palette */
+  color: var(--white)
+}
+
+section#description {
+  padding: 1rem;
 }
 
 /* home */
@@ -156,6 +254,16 @@ table {
 
 @media screen and (max-width: 600px) {
 
+    /* navbar */
+    #responsiveMenuToggleButton {
+    display: block;
+    }
+
+    .navbar-links {
+      display: none;
+    }
+
+    /* albums */
     .album-title {
         text-align: center;
     }
