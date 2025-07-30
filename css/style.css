@@ -38,12 +38,13 @@ a {
 
 .navbar {
   /* position imposes navbar in front of photo */
-  position: fixed;
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgb(0,0,0,.2);
+  z-index: 1000;
 }
 
 .navbar .brand {
@@ -106,14 +107,16 @@ a {
 section#hero {
   background-image: url(../assets/images/blurry-bogo.jpg);
   background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: .85;
 }
 
-/* PADDING 1rem for smaller screen sizes! */
+
 section#hero h1 {
   padding: 1rem;
   font-size: 3rem;
@@ -123,6 +126,7 @@ section#hero h1 {
 
 section#description {
   padding: 1rem;
+  text-align: center;
 }
 
 /* home */
@@ -320,6 +324,26 @@ table {
 
     .navbar-links {
       display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 1rem;
+      z-index: 1000;
+    }
+
+    .navbar-links.show {
+      display: block;
+    }
+
+    .navbar-links ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .navbar-links ul li {
+      text-align: center;
     }
 
     /* Calendar mobile layout */
