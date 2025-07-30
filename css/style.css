@@ -8,12 +8,17 @@
   --white: rgb(254, 253, 253);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
     color:white;
     font-family: 'Horizon';
     margin: 0; 
-    /* margin was changed for navbar */
+    /* padding-top accounts for fixed navbar */
+    padding-top: 60px;
 }
 
 a {
@@ -38,17 +43,20 @@ a {
     margin-top: 1.5rem;
 }
 
-/* nabar */
+/* navbar */
 
 .navbar {
-  /* position imposes navbar in front of photo */
-  position: relative;
+  /* position fixed keeps navbar at top of window while scrolling */
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(0,0,0,.2);
+  background-color: rgb(0,0,0,.9);
   z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
 .navbar .brand {
@@ -290,7 +298,7 @@ table {
 .album-title {
     font-family: 'Horizon', sans-serif;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -342,16 +350,25 @@ table {
     }
 
     .navbar-links.show {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
     }
 
     .navbar-links ul {
       flex-direction: column;
       gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      width: 100%;
     }
 
     .navbar-links ul li {
       text-align: center;
+      width: 100%;
     }
 
     /* Calendar mobile layout */
