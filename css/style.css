@@ -141,6 +141,22 @@ section#description {
   text-align: center;
 }
 
+/* Band Photo */
+.band-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.band-photo {
+  max-width: 100%;
+  height: auto;
+  max-height: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 /* home */
 
 #cowgirls-cover {
@@ -315,9 +331,22 @@ table {
     list-style-type: none;
 }
 
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
 #contact-link {
     display: flex;
     justify-content: center;
+}
+
+.in-the-red-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 /* press */
@@ -325,8 +354,9 @@ table {
 #blurry-photo {
     max-width: 100%; 
     height: auto;
-    opacity: .25;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* mobile */
