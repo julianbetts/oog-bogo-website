@@ -343,10 +343,35 @@ table {
     justify-content: center;
 }
 
+.label-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
 .in-the-red-link {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+}
+
+.in-the-red-link img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.anniversary-link {
+    display: flex;
+    justify-content: center;
+}
+
+.circular-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* press */
