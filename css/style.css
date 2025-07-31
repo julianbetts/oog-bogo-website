@@ -341,6 +341,46 @@ table {
 #contact-link {
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-content div {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.contact-content div a {
+    font-size: 1.1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
 }
 
 .label-links {
@@ -348,7 +388,7 @@ table {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 .in-the-red-link {
