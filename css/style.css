@@ -166,7 +166,13 @@ section#hero h1 {
   letter-spacing: 0.3rem;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
+
 
 .marquee span {
   color: white;
@@ -512,6 +518,12 @@ table {
     .navbar-links ul li {
       text-align: center;
       width: 100%;
+    }
+
+    /* marquee */
+    .marquee {
+      font-size: 2rem;
+      letter-spacing: 0.15rem;
     }
 
     /* Calendar mobile layout */
