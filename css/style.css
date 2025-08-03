@@ -6,6 +6,10 @@
 :root {
   --light-text: rgb(217, 215, 215);
   --white: rgb(254, 253, 253);
+  --cg-yellow: rgba(207,190,143,255);
+  --cg-blue: rgba(31, 78, 121, 1);
+
+
 }
 
 html {
@@ -14,7 +18,7 @@ html {
 
 body {
     background-color: black;
-    color:white;
+    color: white;
     font-family: 'Horizon';
     margin: 0; 
     /* padding-top accounts for fixed navbar */
@@ -136,10 +140,7 @@ section#hero h1 {
   color: var(--white)
 }
 
-section#description {
-  padding: 1rem;
-  text-align: center;
-}
+
 
 /* Band Photo */
 .band-photo-container {
@@ -159,6 +160,87 @@ section#description {
 
 /* home */
 
+#description {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 2px var(--cg-yellow),
+    0 0 4px var(--cg-yellow),
+    0 0 6px var(--cg-yellow),
+    0 0 8px var(--cg-yellow),
+    0 0 10px var(--cg-yellow),
+    0 0 12px var(--cg-yellow),
+    0 0 14px var(--cg-yellow),
+    0 0 16px var(--cg-yellow),
+    0 0 18px var(--cg-yellow),
+    0 0 20px var(--cg-yellow),
+    0 0 22px var(--cg-yellow),
+    0 0 24px var(--cg-yellow),
+    0 0 26px var(--cg-yellow),
+    0 0 28px var(--cg-yellow),
+    0 0 30px var(--cg-yellow),
+    0 0 32px var(--cg-yellow),
+    0 0 34px var(--cg-yellow),
+    0 0 36px var(--cg-yellow),
+    0 0 38px var(--cg-yellow),
+    0 0 40px var(--cg-yellow);
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from {
+    text-shadow: 
+      0 0 2px var(--cg-yellow),
+      0 0 4px var(--cg-yellow),
+      0 0 6px var(--cg-yellow),
+      0 0 8px var(--cg-yellow),
+      0 0 10px var(--cg-yellow),
+      0 0 12px var(--cg-yellow),
+      0 0 14px var(--cg-yellow),
+      0 0 16px var(--cg-yellow),
+      0 0 18px var(--cg-yellow),
+      0 0 20px var(--cg-yellow),
+      0 0 22px var(--cg-yellow),
+      0 0 24px var(--cg-yellow),
+      0 0 26px var(--cg-yellow),
+      0 0 28px var(--cg-yellow),
+      0 0 30px var(--cg-yellow),
+      0 0 32px var(--cg-yellow),
+      0 0 34px var(--cg-yellow),
+      0 0 36px var(--cg-yellow),
+      0 0 38px var(--cg-yellow),
+      0 0 40px var(--cg-yellow);
+  }
+  to {
+    text-shadow: 
+      0 0 1px var(--cg-yellow),
+      0 0 2px var(--cg-yellow),
+      0 0 3px var(--cg-yellow),
+      0 0 4px var(--cg-yellow),
+      0 0 5px var(--cg-yellow),
+      0 0 6px var(--cg-yellow),
+      0 0 7px var(--cg-yellow),
+      0 0 8px var(--cg-yellow),
+      0 0 9px var(--cg-yellow),
+      0 0 10px var(--cg-yellow),
+      0 0 11px var(--cg-yellow),
+      0 0 12px var(--cg-yellow),
+      0 0 13px var(--cg-yellow),
+      0 0 14px var(--cg-yellow),
+      0 0 15px var(--cg-yellow),
+      0 0 16px var(--cg-yellow),
+      0 0 17px var(--cg-yellow),
+      0 0 18px var(--cg-yellow),
+      0 0 19px var(--cg-yellow),
+      0 0 20px var(--cg-yellow);
+  }
+}
+
 #cowgirls-cover {
     display: grid;
     margin: auto;
@@ -170,11 +252,10 @@ section#description {
   gap: 20px; /* spacing between icons */
   margin-top: 1em;
 }
-
 .buy-button {
   align-items: center;
   background-color: transparent;
-  color: #fff;
+  color:var(--white);
   cursor: pointer;
   display: flex;
   font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -229,8 +310,8 @@ section#description {
     justify-content: space-between;
     align-items: center;
     padding: 12px 15px;
-    color: #eaea7b; /* Yellow text color */
-    border-bottom: 1px dotted #eaea7b; /* Dotted line separator */
+    color: var(--cg-yellow); /* Yellow text color */
+    border-bottom: 1px dotted var(--cg-yellow); /* Dotted line separator */
     text-transform: uppercase;
     font-weight: 500;
 }
@@ -483,7 +564,7 @@ table {
         align-items: flex-start;
         padding: 15px;
         margin-bottom: 20px;
-        border-bottom: 1px dotted #eaea7b;
+        border-bottom: 1px dotted var(--cg-yellow);
     }
 
     #calendar li:last-child {
