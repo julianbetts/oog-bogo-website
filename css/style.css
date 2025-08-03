@@ -6,11 +6,12 @@
 :root {
   --light-text: rgb(217, 215, 215);
   --white: rgb(254, 253, 253);
-  --cg-yellow: rgba(207,190,143,255);
+  --cg-yellow: rgb(202,176,86);
   --cg-blue: rgba(31, 78, 121, 1);
-
-
+  --cg-red: rgb(150,38,33);
+  --cg-light-blue: rgb(176,180,194);
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -158,87 +159,47 @@ section#hero h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* cowgirls marquee */
+.marquee {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.marquee span {
+  color: white;
+  padding: 0.1rem;
+  border: 2px solid #333;
+  background-color: black;
+  animation: flicker 2s infinite;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+.marquee span:nth-child(n) {
+  --i: 0;
+}
+.marquee span:nth-child(1) { --i: 0; }
+.marquee span:nth-child(2) { --i: 1; }
+.marquee span:nth-child(3) { --i: 2; }
+.marquee span:nth-child(4) { --i: 3; }
+/* continue for rest */
+
+@keyframes flicker {
+  0%, 100% { background-color: var(--cg-red); color: white; }
+  25% { background-color: var(--cg-yellow); color: black; }
+  50% { background-color: var(--cg-blue); color: black; }
+  75% { background-color: var(--cg-light-blue); color: black; }
+}
+
 /* home */
 
 #description {
   padding: 1rem;
   text-align: center;
   font-size: 1.25rem;
-  color: #000000;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 
-    0 0 2px var(--cg-yellow),
-    0 0 4px var(--cg-yellow),
-    0 0 6px var(--cg-yellow),
-    0 0 8px var(--cg-yellow),
-    0 0 10px var(--cg-yellow),
-    0 0 12px var(--cg-yellow),
-    0 0 14px var(--cg-yellow),
-    0 0 16px var(--cg-yellow),
-    0 0 18px var(--cg-yellow),
-    0 0 20px var(--cg-yellow),
-    0 0 22px var(--cg-yellow),
-    0 0 24px var(--cg-yellow),
-    0 0 26px var(--cg-yellow),
-    0 0 28px var(--cg-yellow),
-    0 0 30px var(--cg-yellow),
-    0 0 32px var(--cg-yellow),
-    0 0 34px var(--cg-yellow),
-    0 0 36px var(--cg-yellow),
-    0 0 38px var(--cg-yellow),
-    0 0 40px var(--cg-yellow);
-  animation: neon-pulse 2s ease-in-out infinite alternate;
-}
-
-@keyframes neon-pulse {
-  from {
-    text-shadow: 
-      0 0 2px var(--cg-yellow),
-      0 0 4px var(--cg-yellow),
-      0 0 6px var(--cg-yellow),
-      0 0 8px var(--cg-yellow),
-      0 0 10px var(--cg-yellow),
-      0 0 12px var(--cg-yellow),
-      0 0 14px var(--cg-yellow),
-      0 0 16px var(--cg-yellow),
-      0 0 18px var(--cg-yellow),
-      0 0 20px var(--cg-yellow),
-      0 0 22px var(--cg-yellow),
-      0 0 24px var(--cg-yellow),
-      0 0 26px var(--cg-yellow),
-      0 0 28px var(--cg-yellow),
-      0 0 30px var(--cg-yellow),
-      0 0 32px var(--cg-yellow),
-      0 0 34px var(--cg-yellow),
-      0 0 36px var(--cg-yellow),
-      0 0 38px var(--cg-yellow),
-      0 0 40px var(--cg-yellow);
-  }
-  to {
-    text-shadow: 
-      0 0 1px var(--cg-yellow),
-      0 0 2px var(--cg-yellow),
-      0 0 3px var(--cg-yellow),
-      0 0 4px var(--cg-yellow),
-      0 0 5px var(--cg-yellow),
-      0 0 6px var(--cg-yellow),
-      0 0 7px var(--cg-yellow),
-      0 0 8px var(--cg-yellow),
-      0 0 9px var(--cg-yellow),
-      0 0 10px var(--cg-yellow),
-      0 0 11px var(--cg-yellow),
-      0 0 12px var(--cg-yellow),
-      0 0 13px var(--cg-yellow),
-      0 0 14px var(--cg-yellow),
-      0 0 15px var(--cg-yellow),
-      0 0 16px var(--cg-yellow),
-      0 0 17px var(--cg-yellow),
-      0 0 18px var(--cg-yellow),
-      0 0 19px var(--cg-yellow),
-      0 0 20px var(--cg-yellow);
-  }
+  color: var(--cg-yellow);
 }
 
 #cowgirls-cover {
