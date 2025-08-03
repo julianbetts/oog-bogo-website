@@ -166,12 +166,13 @@ section#hero h1 {
   letter-spacing: 0.3rem;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  overflow-x: auto;
-  max-width: 100%;
-  padding: 0 1rem;
+  width: 100vw;            /* full viewport width */
+  overflow: hidden;        /* hide anything spilling over */
+  padding: 0.5rem 0;
+  white-space: nowrap;     /* keep it on one line */
   box-sizing: border-box;
 }
+
 
 
 .marquee span {
@@ -522,9 +523,10 @@ table {
 
     /* marquee */
     .marquee {
-      font-size: 2rem;
+      font-size: 3rem;
       letter-spacing: 0.15rem;
     }
+
 
     /* Calendar mobile layout */
     #calendar {
