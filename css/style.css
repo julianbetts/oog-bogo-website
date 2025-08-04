@@ -162,7 +162,7 @@ section#hero h1 {
 /* cowgirls marquee */
 
 .marquee {
-  font-family: 'Times New Roman', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 4rem;
   display: flex;
   justify-content: center;
@@ -252,6 +252,73 @@ section#hero h1 {
 .buy-button:hover:before {
   background-color: #fff;
   width: 3rem;
+}
+
+/* Simple rectangular buy button */
+.simple-buy-button {
+  background-color: var(--cg-yellow);
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin: 0 8px;
+  width: 120px;
+  text-align: center;
+  animation: flicker 2s infinite;
+}
+
+.simple-buy-button:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.simple-buy-button:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.simple-buy-button:hover {
+  background-color: rgb(182, 156, 76);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.simple-buy-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for multiple buttons */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+/* Stream page layout */
+.stream-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  min-width: 200px;
+}
+
+.stream-option h2 {
+  margin-bottom: 16px;
+  color: var(--cg-yellow);
+  font-family: 'Horizon', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 /* videos */
