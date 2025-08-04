@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/script.js"></script>
+    <title>Stream</title>
+    <style>
+        body {
+            background-image: url('assets/images/blurry-bogo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        
+        .stream-content {
+            position: relative;
+            z-index: 1;
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- nav bar -->
+    <header>
+        <nav class="navbar">
+            <div class="brand">
+                <span>Oog Bogo</span>
+            </div>
+            <button aria-label="toggle menu" id="responsiveMenuToggleButton">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="openIcon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="closeIcon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#shows">Shows</a></li>
+                    <li><a href="index.html#albums">Albums</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="stream-content">
+        <div class="center-container">
+            <!-- <h1>Stream</h1> -->
+        </div>
+        <div class="center-container">
+            <div class="stream-option">
+                <a href="https://open.spotify.com/album/4zHUKlvcnAQ7Vd2WtiP0Zo" target="_blank" class="simple-buy-button">Listen on Spotify</a>
+            </div>
+            <div class="stream-option">
+                <a href="https://music.apple.com/us/album/cowgirls/1819719471" target="_blank" class="simple-buy-button">Listen on Apple Music</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
