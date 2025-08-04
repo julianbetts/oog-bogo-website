@@ -162,7 +162,7 @@ section#hero h1 {
 /* cowgirls marquee */
 
 .marquee {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 4rem;
   display: flex;
   justify-content: center;
@@ -196,10 +196,10 @@ section#hero h1 {
 .marquee span:nth-child(8) { --i: 7; }
 
 @keyframes flicker {
-  0%, 100% { background-color: var(--cg-red); color: white; }
+  0%, 100% { background-color: var(--cg-red); color: black; }
   25%      { background-color: var(--cg-yellow); color: black; }
   50%      { background-color: var(--cg-blue); color: black; }
-  75%      { background-color: var(--cg-light-blue); color: black; }
+  75%      { background-color: var(--cg-light-blue); color: black; } 
 }
 /* home */
 
