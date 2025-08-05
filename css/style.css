@@ -457,6 +457,7 @@ table {
 
 /* contact */
 
+
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -473,14 +474,21 @@ table {
 #contact-link {
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+#contact-link h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .contact-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1rem;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -489,7 +497,7 @@ table {
     text-align: center;
     width: 100%;
     max-width: 500px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
