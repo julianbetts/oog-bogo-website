@@ -45,7 +45,14 @@ a {
 .header {
     display: flex;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* navbar */
@@ -474,8 +481,8 @@ table {
 #contact-link {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
 }
 
 #contact-link h1 {
