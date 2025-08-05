@@ -201,6 +201,11 @@ section#hero h1 {
   50%      { background-color: var(--cg-blue); color: black; }
   75%      { background-color: var(--cg-light-blue); color: black; } 
 }
+
+@keyframes yellowPulse {
+  0%, 100% { background-color: var(--cg-yellow); color: black; }
+  50%      { background-color: rgb(150, 120, 50); color: black; }
+}
 /* home */
 
 #description {
@@ -208,6 +213,10 @@ section#hero h1 {
   text-align: center;
   font-size: 1.25rem;
   color: var(--cg-yellow);
+}
+
+#cowgirls-cover-container {
+  margin-top: 1rem;
 }
 
 #cowgirls-cover {
@@ -256,9 +265,9 @@ section#hero h1 {
 
 /* Simple rectangular buy button */
 .simple-buy-button {
-  background-color: var(--cg-yellow);
-  color: black;
-  border: none;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
   padding: 12px 24px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
@@ -271,7 +280,6 @@ section#hero h1 {
   margin: 0 8px;
   width: 120px;
   text-align: center;
-  animation: flicker 2s infinite;
 }
 
 .simple-buy-button:nth-child(1) {
@@ -283,7 +291,8 @@ section#hero h1 {
 }
 
 .simple-buy-button:hover {
-  background-color: rgb(182, 156, 76);
+  background-color: white;
+  color: black;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -545,6 +554,59 @@ table {
     margin-top: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Columbo container links */
+.columbo-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.columbo-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cg-yellow);
+    transition: transform 0.3s ease;
+    padding: 0.5rem;
+}
+
+.columbo-link img {
+    background-color: white;
+    border-radius: 50%;
+    padding: 12px;
+    width: 48px;
+    height: 48px;
+    animation: flicker 2s infinite;
+}
+
+.columbo-link:nth-child(1) img {
+    animation-delay: 0s;
+}
+
+.columbo-link:nth-child(2) img {
+    animation-delay: 0.2s;
+}
+
+.columbo-link:nth-child(3) img {
+    animation-delay: 0.4s;
+}
+
+.columbo-link:hover {
+    transform: translateY(-4px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.columbo-link span {
+    margin-top: 0.5rem;
+    font-family: 'Horizon', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* mobile */
