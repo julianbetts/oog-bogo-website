@@ -359,7 +359,7 @@ section#hero h1 {
 #stream-page .stream-content {
   position: relative;
   z-index: 1;
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
 /* Ensure stream buttons stay side by side on mobile */
