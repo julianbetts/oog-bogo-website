@@ -55,6 +55,20 @@ a {
     font-weight: bold;
 }
 
+/* Smaller headers for shows and contact sections */
+#shows .header h1,
+#contact .header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--cg-yellow);
+}
+
+#shows .header,
+#contact .header {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
 /* navbar */
 
 .navbar {
@@ -359,7 +373,7 @@ section#hero h1 {
 #stream-page .stream-content {
   position: relative;
   z-index: 1;
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
 /* Ensure stream buttons stay side by side on mobile */
