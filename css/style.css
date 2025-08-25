@@ -7,6 +7,7 @@
   --light-text: rgb(217, 215, 215);
   --white: rgb(254, 253, 253);
   --cg-yellow: rgb(202,176,86);
+  --cg-yellow-pale: rgb(180, 160, 100);
   --cg-blue: rgba(31, 78, 121, 1);
   --cg-red: rgb(150,38,33);
   --cg-light-blue: rgb(176,180,194);
@@ -60,7 +61,7 @@ a {
 #contact .header h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: var(--cg-yellow);
+    color: var(--light-text);
 }
 
 #shows .header,
@@ -427,8 +428,8 @@ section#hero h1 {
     justify-content: space-between;
     align-items: center;
     padding: 12px 15px;
-    color: var(--cg-yellow); /* Yellow text color */
-    border-bottom: 1px dotted var(--cg-yellow); /* Dotted line separator */
+    color: var(--cg-yellow-pale); /* Paler yellow text color */
+    border-bottom: 1px dotted var(--cg-yellow-pale); /* Dotted line separator */
     text-transform: uppercase;
     font-weight: 500;
 }
