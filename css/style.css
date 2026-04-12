@@ -424,9 +424,10 @@ section#hero h1 {
 }
 
 #calendar li {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 90px 1fr 170px;
     align-items: center;
+    column-gap: 20px;
     padding: 12px 15px;
     color: var(--cg-yellow-pale); /* Paler yellow text color */
     border-bottom: 1px dotted var(--cg-yellow-pale); /* Dotted line separator */
@@ -755,6 +756,7 @@ table {
     }
 
     #calendar li {
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 15px;
